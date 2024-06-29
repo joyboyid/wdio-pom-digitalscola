@@ -1,15 +1,19 @@
 import Page from "./page.js";
 
-class CartPage extends Page {
+class CheckoutPage extends Page {
     open(path) {
         return super.open("cart.html")
     }
-    get cartIcon() {
-        return $("#shopping_cart_container")
+    // get cartIcon() {
+    //     return $("#shopping_cart_container")
+    // }
+
+    get checkoutIcon(){
+        return $("#checkout")
     }
 
-    async viewItem(){
-        await this.cartIcon.click()
+    async Checkout(){
+        await this.checkoutIcon.click()
     }
 
     async validateOnPage() {
@@ -20,4 +24,4 @@ class CartPage extends Page {
     }
 }
 
-export default new CartPage();
+export default new CheckoutPage();
