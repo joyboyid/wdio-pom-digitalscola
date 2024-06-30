@@ -2,7 +2,7 @@ import InventoryPage from "../pageobjects/inventory.page.js";
 import LoginPage from "../pageobjects/login.page.js";
 import CartPage from "../pageobjects/cart.page.js";
 import CheckoutPage from "../pageobjects/checkout.page.js";
-// import FinishPage from "../pageobjects/finish.page.js";
+import FinishPage from "../pageobjects/finish.page.js";
 
 
 describe('Login test', () => {
@@ -32,9 +32,8 @@ describe('Login test', () => {
         await CheckoutPage.validateOnPage()
     });
 
-    // it('Finish', async () => {
-    //     await FinishPage.open()
-    //     await FinishPage.finish()
-    // });
-
+    it('Finish', async ()=>{
+        await FinishPage.open()
+        await FinishPage.finish()
+    })
 });
